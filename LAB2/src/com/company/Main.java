@@ -54,6 +54,12 @@ public class Main {
             System.out.println("Równanie liniowe, x = " + x);
         }
     }
+    public static double zadanie2a(double x)
+    {
+        if (x>0) return 2*x;
+        else if (x==0) return 0;
+        else return -3*x;
+    }
     public static double Zadanie_2b(double x)
     {
         if(x>=1) return (x*x);
