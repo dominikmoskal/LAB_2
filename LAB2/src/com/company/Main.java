@@ -99,4 +99,52 @@ public class Main {
         if (!deszcz && autobus)
             System.out.print(y+", "+z);
     }
+    public static void Zadanie_5() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Czy jest zniżka?");
+        boolean znizka = scan.nextBoolean();
+        System.out.println("Czy otrzymałeś premię?");
+        boolean premia = scan.nextBoolean();
+        if (!znizka || premia) {
+            System.out.println("Możesz kupić samochód! Zniżki na samochód nie ma.");
+        }
+        if (!znizka || !premia) {
+            System.out.println("Zakup samochodu trzeba odłożyć na później. Zniżki na samochód nie ma.");
+        }
+        if (znizka || premia) {
+            System.out.println("Możesz kupić samochód!");
+        }
+    }
+    public static void Zadanie_6()
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Wprowadź pierwszą liczbę: a= ");
+        double a = scan.nextDouble();
+        System.out.println("Wprowadź drugą liczbę: b= ");
+        double b = scan.nextDouble();
+        System.out.println("1.Dodawanie");
+        System.out.println("2.Odejmowanie");
+        System.out.println("3.Mnożenie");
+        System.out.println("4.Dzielenie");
+        System.out.println("5.Reszta z dzielenia");
+        double suma = a + b;
+        double roznica = a - b;
+        double iloczyn = a * b;
+        double iloraz = a / b;
+        double reszta = a % b;
+        System.out.println("Wybierz jakie działanie chcesz wykonać z podanych wyżej opcji: ");
+        for (int i = 1; i > 0; i--)
+        {
+            int choice = scan.nextInt();
+            if (choice == 1) System.out.println("Suma " + a + " i " + b + " wynosi: " + suma);
+            if (choice == 2) System.out.println("Różnica " + a + " i " + b + " wynosi: " + roznica);
+            if (choice == 3) System.out.println("Iloczyn " + a + " i " + b + " wynosi: " + iloczyn);
+            if (choice == 4)
+            {
+                if (b == 0) System.out.println("Nie można dzielić przez 0");
+                else System.out.println("Iloraz" + a + " przez " + b + " wynosi: " + iloraz);
+            }
+            if (choice == 5) System.out.println("Reszta z dzielenia " + a + " przez " + b + " wynosi: " + reszta);
+        }
+    }
 }
